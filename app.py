@@ -10,7 +10,7 @@ st.set_page_config(
     layout="centered"
 )
 
-# Custom CSS for gorgeous styling and layout spacing
+# Custom CSS to fix white backgrounds and style elements
 st.markdown("""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
@@ -45,13 +45,11 @@ st.markdown("""
         font-size: 1rem;
     }
 
-    /* Container Box Styling */
     div.block-container {
         padding: 2rem;
         max-width: 850px;
     }
 
-    /* Form Labels */
     label {
         font-size: 0.9rem !important;
         font-weight: 600 !important;
@@ -59,15 +57,31 @@ st.markdown("""
         margin-bottom: 0.3rem !important;
     }
 
-    /* Input fields and selectboxes */
-    .stSelectbox div[data-baseweb="select"], .stNumberInput input {
-        background-color: rgba(15, 23, 42, 0.7) !important;
+    /* Fix white background for selectboxes and inputs */
+    .stSelectbox div[data-baseweb="select"] {
+        background-color: rgba(15, 23, 42, 0.8) !important;
         border: 1px solid rgba(255, 255, 255, 0.15) !important;
         border-radius: 12px !important;
-        color: #ffffff !important;
+        color: white !important;
     }
 
-    /* Submit Button Styling */
+    /* Dropdown menu background */
+    div[data-baseweb="popover"] div[data-baseweb="menu"] {
+        background-color: #0f172a !important;
+        color: white !important;
+    }
+    
+    div[data-baseweb="popover"] div[data-baseweb="menu"] div {
+        color: white !important;
+    }
+
+    .stNumberInput input {
+        background-color: rgba(15, 23, 42, 0.8) !important;
+        border: 1px solid rgba(255, 255, 255, 0.15) !important;
+        border-radius: 12px !important;
+        color: white !important;
+    }
+
     div.stButton > button {
         width: 100%;
         margin-top: 1.5rem;
@@ -90,7 +104,6 @@ st.markdown("""
         color: white;
     }
 
-    /* Result Cards */
     .result-card-success {
         margin-top: 2rem;
         padding: 1.5rem;
