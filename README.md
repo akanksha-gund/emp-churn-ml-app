@@ -1,3 +1,3 @@
 # Emp-Churn-Prediction
 
-Live Link = https://emp-churn-prediction-5.onrender.com/
+Live Link = https://emp-churn-ml-app-mpu7hxzwwxapps6to29jt9c.streamlit.app/
