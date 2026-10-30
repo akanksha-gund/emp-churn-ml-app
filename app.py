@@ -10,7 +10,7 @@ st.set_page_config(
     layout="centered"
 )
 
-# Custom CSS for soft background image and dark glassmorphic UI
+# Custom CSS for soft background image and dark glassmorphic UI with visible text
 st.markdown("""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
@@ -67,7 +67,7 @@ st.markdown("""
         margin-bottom: 0.3rem !important;
     }
 
-    /* Fix white background for selectboxes and inputs */
+    /* Fix background and text color for selectboxes */
     .stSelectbox div[data-baseweb="select"] {
         background-color: rgba(15, 23, 42, 0.8) !important;
         border: 1px solid rgba(255, 255, 255, 0.2) !important;
@@ -84,11 +84,13 @@ st.markdown("""
         color: white !important;
     }
 
+    /* Fix background and text color for number inputs */
     .stNumberInput input {
         background-color: rgba(15, 23, 42, 0.8) !important;
         border: 1px solid rgba(255, 255, 255, 0.2) !important;
         border-radius: 12px !important;
-        color: white !important;
+        color: #ffffff !important;
+        -webkit-text-fill-color: #ffffff !important;
     }
 
     div.stButton > button {
