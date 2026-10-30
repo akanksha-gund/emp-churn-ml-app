@@ -10,7 +10,7 @@ st.set_page_config(
     layout="centered"
 )
 
-# Custom CSS to fix white backgrounds and style elements
+# Custom CSS for soft background image and dark glassmorphic UI
 st.markdown("""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
@@ -19,10 +19,14 @@ st.markdown("""
         font-family: 'Plus Jakarta Sans', sans-serif;
     }
 
+    /* Background with soft image and dark overlay */
     .stApp {
-        background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #311042 100%);
-        color: #f8fafc;
+        background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(30, 27, 75, 0.85)), 
+                    url('https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1920&auto=format&fit=crop');
+        background-size: cover;
+        background-position: center;
         background-attachment: fixed;
+        color: #f8fafc;
     }
 
     .main-header {
@@ -41,13 +45,19 @@ st.markdown("""
     }
 
     .main-header p {
-        color: #94a3b8;
+        color: #cbd5e1;
         font-size: 1rem;
     }
 
     div.block-container {
         padding: 2rem;
         max-width: 850px;
+        background: rgba(15, 23, 42, 0.4);
+        border-radius: 24px;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        margin-top: 2rem;
+        margin-bottom: 2rem;
     }
 
     label {
@@ -60,12 +70,11 @@ st.markdown("""
     /* Fix white background for selectboxes and inputs */
     .stSelectbox div[data-baseweb="select"] {
         background-color: rgba(15, 23, 42, 0.8) !important;
-        border: 1px solid rgba(255, 255, 255, 0.15) !important;
+        border: 1px solid rgba(255, 255, 255, 0.2) !important;
         border-radius: 12px !important;
         color: white !important;
     }
 
-    /* Dropdown menu background */
     div[data-baseweb="popover"] div[data-baseweb="menu"] {
         background-color: #0f172a !important;
         color: white !important;
@@ -77,7 +86,7 @@ st.markdown("""
 
     .stNumberInput input {
         background-color: rgba(15, 23, 42, 0.8) !important;
-        border: 1px solid rgba(255, 255, 255, 0.15) !important;
+        border: 1px solid rgba(255, 255, 255, 0.2) !important;
         border-radius: 12px !important;
         color: white !important;
     }
@@ -109,8 +118,8 @@ st.markdown("""
         padding: 1.5rem;
         border-radius: 16px;
         text-align: center;
-        background: rgba(34, 197, 94, 0.1);
-        border: 1px solid rgba(34, 197, 94, 0.3);
+        background: rgba(34, 197, 94, 0.15);
+        border: 1px solid rgba(34, 197, 94, 0.4);
         animation: fadeIn 0.4s ease-in-out;
     }
 
@@ -119,8 +128,8 @@ st.markdown("""
         padding: 1.5rem;
         border-radius: 16px;
         text-align: center;
-        background: rgba(239, 68, 68, 0.1);
-        border: 1px solid rgba(239, 68, 68, 0.3);
+        background: rgba(239, 68, 68, 0.15);
+        border: 1px solid rgba(239, 68, 68, 0.4);
         animation: fadeIn 0.4s ease-in-out;
     }
 
